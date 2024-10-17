@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CountingModule } from './counting/counting.module';
 
 
 
@@ -25,6 +26,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [],
       autoLoadEntities: true,
     }),
+    CountingModule
   ],
   controllers: [AppController],
   providers: [AppService],
